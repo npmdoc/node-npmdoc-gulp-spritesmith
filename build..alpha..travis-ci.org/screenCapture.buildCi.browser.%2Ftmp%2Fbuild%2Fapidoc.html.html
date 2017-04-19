@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/Otouto/gulp-spritesmith"
-
-    >gulp-spritesmith (v0.0.2)</a>
+    <a href="https://github.com/Otouto/gulp-spritesmith">gulp-spritesmith (v0.0.2)</a>
 </h1>
 <h4>A plugin for Gulp</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-spritesmith">module gulp-spritesmith</a><ol>
 
@@ -86,18 +79,18 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">gulp-spritesmith = function (opt) {
-    &#x27;use strict&#x27;;
+    'use strict';
     opt = opt || {};
     var buffer = opt.groupBy ? {} : [],
         defaults = {
-            &#x27;engine&#x27;: &#x27;auto&#x27;,
-            &#x27;algorithm&#x27;: &#x27;binary-tree&#x27;,
-            &#x27;padding&#x27;: 1
+            'engine': 'auto',
+            'algorithm': 'binary-tree',
+            'padding': 1
         },
         params = _.extend({}, defaults, opt);
 
     function rename(file, group) {
-        return file.replace(/\.(?=[^.]*$)/g, &#x27;.&#x27; + group + &#x27;.&#x27;);
+        return file.replace(/\.(?=[^.]*$)/g, '.' + group + '.');
     }
 
     function processFiles(group, data, end) {
@@ -106,7 +99,7 @@
         params.src = group ? buffer[group] : buffer;
         spritesmith(params, function (err, result) {
             if (err) {
-                return self.emit(&#x27;error&#x27;, new PluginError(&#x27;gulp-spritesmith&#x27;, &#x27;Error occurred during spritesmith processing&#x27;));
+                return self.emit('error', new PluginError('gulp-spritesmith', 'Error occurred during spritesmith processing'));
             }
 
             var imgPath = group ? rename(opt.imgPath, group) : opt.imgPath,
@@ -126,10 +119,10 @@
 
     function bufferContents(file) {
         if (file.isNull()) { return; }// ignore
-        if (file.isStream()) { return this.emit(&#x27;error&#x27;, new PluginError(&#x27;gulp-spritesmith&#x27;, &#x27;Streaming not supported&#x27;)); }
+        if (file.isStream()) { return this.emit('error', new PluginError('gulp-spritesmith', 'Streaming not supported')); }
 
         var group = opt.groupBy,
-            groupValue = &#x27;&#x27;,
+            groupValue = '',
             parsedPath = file.relative.split(path.sep);
 
         //TODO refactor ugly code
@@ -145,30 +138,30 @@
     }
 
     function endStream() {
-        if (Object.keys(buffer).length === 0 || buffer.length === 0) { return this.emit(&#x27;end&#x27;); }
+        if (Object.keys(buffer).length === 0 || buffer.length === 0) { return this.emit('end'); }
 
         var self = this;
 
         function data(result) {
-            self.emit(&#x27;data&#x27;, new File({
-                cwd: &#x27;./&#x27;,
-                base: &#x27;./&#x27;,
+            self.emit('data', new File({
+                cwd: './',
+                base: './',
                 path: result.group ? rename(opt.styleName, result.group) : opt.styleName,
                 contents: new Buffer(result.css)
             }));
 
-            self.emit(&#x27;data&#x27;, new File({
-                cwd: &#x27;./&#x27;,
-                base: &#x27;./&#x27;,
+            self.emit('data', new File({
+                cwd: './',
+                base: './',
                 path: result.group ? rename(opt.imgName, result.group) : opt.imgName,
-                contents: new Buffer(result.img, &#x27;binary&#x27;)
+                contents: new Buffer(result.img, 'binary')
             }));
         }
         function end() {
-            self.emit(&#x27;end&#x27;);
+            self.emit('end');
         }
 
-        ({}.toString.call(buffer) === &#x27;[object Array]&#x27;) ? processFiles(null, data, end) : processByGroup(data, end);
+        ({}.toString.call(buffer) === '[object Array]') ? processFiles(null, data, end) : processByGroup(data, end);
     }
 
     return through(bufferContents, endStream);
@@ -185,3 +178,4 @@
     ]
 </div>
 </div>
+</body></html>
