@@ -1,9 +1,14 @@
-# api documentation for  [gulp-spritesmith (v0.0.2)](https://github.com/Otouto/gulp-spritesmith)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-spritesmith.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-spritesmith) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-spritesmith.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-spritesmith)
+# npmdoc-gulp-spritesmith
+
+#### api documentation for  [gulp-spritesmith (v0.0.2)](https://github.com/Otouto/gulp-spritesmith)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-spritesmith.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-spritesmith) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-spritesmith.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-spritesmith)
+
 #### A plugin for Gulp
 
-[![NPM](https://nodei.co/npm/gulp-spritesmith.png?downloads=true)](https://www.npmjs.com/package/gulp-spritesmith)
+[![NPM](https://nodei.co/npm/gulp-spritesmith.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-spritesmith)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-spritesmith/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp-spritesmith_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-spritesmith/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-spritesmith/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-spritesmith/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-spritesmith/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-spritesmith/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-spritesmith/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Dmitry Lutsik",
-        "email": "otoyto@gmail.com",
         "url": "https://github.com/Otouto"
     },
     "bugs": {
@@ -58,13 +62,11 @@
     "main": "./index.js",
     "maintainers": [
         {
-            "name": "otouto",
-            "email": "otoyto@gmail.com"
+            "name": "otouto"
         }
     ],
     "name": "gulp-spritesmith",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/otouto/gulp-spritesmith.git"
@@ -72,16 +74,6 @@
     "version": "0.0.2"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-spritesmith](#apidoc.module.gulp-spritesmith)
-
-
-
-# <a name="apidoc.module.gulp-spritesmith"></a>[module gulp-spritesmith](#apidoc.module.gulp-spritesmith)
 
 
 
